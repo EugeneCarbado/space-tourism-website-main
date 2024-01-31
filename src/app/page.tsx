@@ -5,7 +5,7 @@ import ContentWrapper from '@/components/ContentWrapper';
 
 export default function Home() {
   return (
-    <BaseLayout className="bg-homeImageMobile bg-contain bg-no-repeat h-[100dvh]">
+    <BaseLayout className="bg-homeImageMobile bg-cover bg-no-repeat h-[100dvh]">
       <ContentWrapper>
         <div className="text-white flex flex-col items-center text-center py-6">
           <p className="uppercase font-barlowCondensed tracking-widest mb-4 font-normal">
