@@ -13,7 +13,7 @@ export default function Home() {
           </p>
           <h1 className="text-[80px] font-belleFair uppercase mb-4">Space</h1>
           <p className="font-barlow text-[15px] mb-20">
-            Let’s face it; if you want to go to space, you might as well
+            Let’s face it, if you want to go to space, you might as well
             genuinely go to outer space and not hover kind of on the edge of it.
             Well sit back, and relax because we’ll give you a truly out of this
             world experience!

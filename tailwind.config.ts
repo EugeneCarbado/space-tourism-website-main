@@ -9,7 +9,14 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        homeImageMobile: "url('../images/mobile/background-home-mobile.jpg')",
+        homeImageMobile:
+          "url('../images/background/background-home-mobile.jpg')",
+        destinationImageMobile:
+          "url('../images/background/background-destination-mobile.jpg')",
+        moonImage: "url('../images/destination/image-moon.webp')",
+        europaImage: "url('../images/destination/image-europa.webp')",
+        marsImage: "url('../images/destination/image-mars.webp')",
+        titanImage: "url('../images/destination/image-titan.webp')",
       },
       colors: {
         spBlack: '#0B0D17',
