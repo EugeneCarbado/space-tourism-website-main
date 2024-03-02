@@ -17,7 +17,7 @@ function NavigationMobile(): ReactElement {
 
   useEffect(() => {
     let handler = (e: any) => {
-      if (!menuRef.current.contains(e.target)) {
+      if (!menuRef.current?.contains(e.target)) {
         setIsOpen(false);
       }
     };
@@ -28,7 +28,7 @@ function NavigationMobile(): ReactElement {
     <div className="relative">
       <ContentWrapper className="py-6">
         <nav className="flex justify-between items-center">
-          <Link href={'/home'}>
+          <Link href={'/'}>
             <Image src={SpaceLogo} alt="Space logo" priority />
           </Link>
           <div onClick={() => setIsOpen(!isOpen)}>
@@ -47,7 +47,7 @@ function NavigationMobile(): ReactElement {
           </div>
         </nav>
         <div className="text-white font-barlowCondensed text-base uppercase tracking-widest p-8">
-          <Link className="z-60" href="/home">
+          <Link className="z-60" href="/">
             <p className="mb-8">
               <span className="font-bold mr-1">00 </span>home
             </p>

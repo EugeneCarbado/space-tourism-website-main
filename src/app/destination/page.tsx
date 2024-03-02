@@ -1,74 +1,59 @@
+'use client';
+
 import {ReactElement} from 'react';
-import Image from 'next/image';
 
 import BaseLayout from '@/components/BaseLayout';
+import ContentWrapper from '@/components/ContentWrapper';
 import MoonImage from '@/images/destination/image-moon.webp';
 import EuropaImage from '@/images/destination/image-europa.webp';
 import MarsImage from '@/images/destination/image-mars.webp';
 import TitanImage from '@/images/destination/image-titan.webp';
-import ContentWrapper from '@/components/ContentWrapper';
+import Carousel from '@/components/Carousel';
 
 const destinations = [
   {
+    key: 0,
     image: MoonImage,
-    alt: 'Moon image',
+    title: 'Moon',
+    text: 'See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.',
+    distance: '384,400',
+    travelTime: '3 days',
   },
-  //   {
-  //     image: MarsImage,
-  //     alt: 'Mars image',
-  //   },
-  //   {
-  //     image: EuropaImage,
-  //     alt: 'Europa image',
-  //   },
-  //   {
-  //     image: TitanImage,
-  //     alt: 'Titan image',
-  //   },
+  {
+    key: 1,
+    image: MarsImage,
+    title: 'Mars',
+    text: 'Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!',
+    distance: '225 mil.',
+    travelTime: '9 months',
+  },
+  {
+    key: 2,
+    image: EuropaImage,
+    title: 'Europa',
+    text: 'The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.',
+    distance: '628 Mil.',
+    travelTime: '3 years',
+  },
+  {
+    key: 3,
+    image: TitanImage,
+    title: 'Titan',
+    text: 'The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.',
+    distance: '1.6 Bil.',
+    travelTime: '7 years',
+  },
 ];
 
 function Destination(): ReactElement {
   return (
-    <BaseLayout className="bg-destinationImageMobile">
-      <ContentWrapper>
-        <div className="text-white">
-          <h4>
-            01<span></span>Pick your destination
-          </h4>
-          <div className="flex items-center justify-center overflow-hidden">
-            {destinations.map(img => (
-              <Image
-                key={img.alt}
-                className="w-44"
-                src={img.image}
-                alt={img.alt}
-              />
-            ))}
-          </div>
-        </div>
-        <div className="flex text-white">
-          <p>Moon</p>
-          <p>Mars</p>
-          <p>Europa</p>
-          <p>Titan</p>
-        </div>
-        <div className="text-white">
-          <h1>Moon</h1>
-          <p>
-            See our planet as you&apos;ve never seen it before. A perfect
-            relaxing trip away to help regain perspective and come back
-            refreshed. While you&apos;re there, take in some history by visiting
-            the Luna 2 and Apollo 11 landing sites.
-          </p>
-        </div>
-        <div />
-        <div className="text-white">
-          <p>Avg. distance</p>
-          <h2>384,400 KM</h2>
-          <p>Est. travel time</p>
-          <h2>3 days</h2>
-        </div>
+    <BaseLayout className="bg-destinationImageMobile text-white text-base tracking-widest">
+      <ContentWrapper className="">
+        <h4 className="mb-8 text-center font-barlowCondensed uppercase">
+          <span className="text-[#4D4F57] mr-2">01 </span>Pick your destination
+        </h4>
       </ContentWrapper>
+      <Carousel slides={destinations} />
     </BaseLayout>
   );
 }

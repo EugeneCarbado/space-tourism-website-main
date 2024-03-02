@@ -1,3 +1,4 @@
+'use client';
 import {ReactElement, ReactNode} from 'react';
 
 import NavigationMobile from './NavigationMobile';

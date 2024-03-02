@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 import BaseLayout from '@/components/BaseLayout';
 import ContentWrapper from '@/components/ContentWrapper';
@@ -19,9 +20,11 @@ export default function Home() {
             world experience!
           </p>
           <div className="bg-spWhite w-[150px] h-[150px] flex items-center justify-center rounded-full">
-            <h3 className="text-spBlack font-belleFair text-xl uppercase">
-              Explore
-            </h3>
+            <Link href="/destination">
+              <h3 className="text-spBlack font-belleFair text-xl uppercase">
+                Explore
+              </h3>
+            </Link>
           </div>
         </div>
       </ContentWrapper>
